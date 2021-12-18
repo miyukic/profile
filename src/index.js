@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import profile from './profile';
+
 ReactDOM.render(
   <React.StrictMode>
-    <button>test</button>
+    <image src="icon.png"></image>
+    <profile></profile>
   </React.StrictMode>,
   document.getElementById('root')
 );
