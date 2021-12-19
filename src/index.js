@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import profile from './profile';
+import IconComponent from './IcomComponent';
 
 ReactDOM.render(
   <React.StrictMode>
     <image src="icon.png"></image>
-    <profile></profile>
+    <IconComponent></IconComponent>
   </React.StrictMode>,
   document.getElementById('root')
 );
