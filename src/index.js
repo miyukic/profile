@@ -8,8 +8,7 @@ import IconComponent from './IcomComponent';
 
 ReactDOM.render(
   <React.StrictMode>
-    <image src="icon.png"></image>
-    <IconComponent></IconComponent>
+    <IconComponent height={150} width={150}></IconComponent>
   </React.StrictMode>,
   document.getElementById('root')
 );
