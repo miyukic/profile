@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import IconComponent from './IcomComponent';
 import Profile from './Profile';
 
+// ChakuraUI プロバイダーの設定
+import { ChakraProvider } from '@chakra-ui/react';
+
 window.onload = () => {
-  console.log("window.onloadが読み込まれました。");
 }
 
 ReactDOM.render(
   <React.StrictMode>
     <IconComponent height={150} width={150}></IconComponent>
-    <Profile></Profile>
+    <Profile />
   </React.StrictMode>,
   document.getElementById('root')
 );
