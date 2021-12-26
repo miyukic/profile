@@ -6,16 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import IconComponent from './IcomComponent';
 import Profile from './Profile';
 
-// ChakuraUI プロバイダーの設定
+//ChakuraUI プロバイダーの設定
 import { ChakraProvider } from '@chakra-ui/react';
 
 window.onload = () => {
+  console.log("log");
 }
 
 ReactDOM.render(
   <React.StrictMode>
-    <IconComponent height={150} width={150}></IconComponent>
-    <Profile />
+  <ChakraProvider>
+    <IconComponent width={200}></IconComponent>
+    <Profile></Profile>
+  </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
