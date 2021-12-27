@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import IconComponent from './IcomComponent';
 import Profile from './Profile';
 
 //ChakuraUI プロバイダーの設定
@@ -16,7 +15,6 @@ window.onload = () => {
 ReactDOM.render(
   <React.StrictMode>
   <ChakraProvider>
-    <IconComponent width={200}></IconComponent>
     <Profile></Profile>
   </ChakraProvider>
   </React.StrictMode>,
