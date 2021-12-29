@@ -7,19 +7,19 @@ import Profile from './Profile';
 
 //ChakuraUI プロバイダーの設定
 import { ChakraProvider } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react'
+
 
 window.onload = () => {
-  console.log("log");
+  ReactDOM.render(
+    <React.StrictMode>
+      <ChakraProvider>
+        <Profile></Profile>
+      </ChakraProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 }
-
-ReactDOM.render(
-  <React.StrictMode>
-  <ChakraProvider>
-    <Profile></Profile>
-  </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
