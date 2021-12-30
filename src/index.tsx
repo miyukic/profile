@@ -2,20 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
-import Profile from './Profile';
+import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react';
+
+//cexport { default as Profile } from './Profile';
 
 //ChakuraUI プロバイダーの設定
-import { ChakraProvider } from '@chakra-ui/react';
-import { Box } from '@chakra-ui/react'
+
+/// <reference path="./main.ts">
 
 
 window.onload = () => {
   ReactDOM.render(
     <React.StrictMode>
-      <ChakraProvider>
-        <Profile></Profile>
-      </ChakraProvider>
+      <App></App>
     </React.StrictMode>,
     document.getElementById('root')
   );
