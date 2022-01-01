@@ -20,14 +20,23 @@ export function getWidth() {
     return window.innerWidth;
 }
 
+ReactDOM.render(
+    <React.StrictMode>
+        <App></App>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+
+
 window.onload = () => {
     console.log(getWidth());
-    ReactDOM.render(
-        <React.StrictMode>
-            <App></App>
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
+    // const el: HTMLElement | null = document.getElementById("main") as HTMLCanvasElement;
+    // if (el == null) return;
+    // const ca: HTMLCanvasElement = el as HTMLCanvasElement;
+    // const g: CanvasRenderingContext2D | null = ca.getContext("2d");
+    // if (g == null) return;
+    // g.font = FONT;
+    // g.fillText("Hello World", 0, 64);
 }
 
 // If you want to start measuring performance in your app, pass a function
