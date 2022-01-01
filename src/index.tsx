@@ -6,20 +6,24 @@ import App from './App';
 
 import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react';
 
-//cexport { default as Profile } from './Profile';
+//export { default as Profile } from './Profile';
 
 //ChakuraUI プロバイダーの設定
 
-/// <reference path="./main.ts">
+export const BLANK: String = "&nbsp;";
 
+export function getWidth() {
+    return window.innerWidth;
+}
 
 window.onload = () => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <App></App>
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
+    console.log(getWidth());
+    ReactDOM.render(
+        <React.StrictMode>
+            <App></App>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
 }
 
 // If you want to start measuring performance in your app, pass a function
