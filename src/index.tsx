@@ -10,7 +10,11 @@ import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react';
 
 //ChakuraUI プロバイダーの設定
 
-export const BLANK: String = "&nbsp;";
+
+export class Value {
+    static readonly BLANK: string = "&nbsp;";
+    static readonly WIDTH: number = 1920 / 2;
+}
 
 export function getWidth() {
     return window.innerWidth;
