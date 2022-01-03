@@ -1,15 +1,24 @@
 import React from 'react';
-import IconPng from './icon.png';
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Circle, Image } from '@chakra-ui/react'
 import { getWidth } from './index'
 
+interface IconProps {
+//    readonly width: number | undefined;
+//   readonly height: number | undefined;
+    readonly image: string | undefined;
+}
 
-const Icon = (props: any) => {
-    let height = props.height;
-    let width = props.width;
+
+const Icon: React.VFC<IconProps> = (props: IconProps) => {
+    let height = 30;
+    let width = 30;
+    let IconPng = props.image;
+
     if (width == undefined) width = 180;
     return (
-            <Image mx={10} padding={30} src={IconPng} alt="miyuki" width={width} height={height} borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'></Image>
+        <Circle mx={'auto'} width={200} height={200} bg={'gray.100'}>
+            <Image mx={10} padding={10} src={IconPng} alt="miyuki" width={width} height={height} borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'></Image>
+        </Circle>
     )
 }
 
