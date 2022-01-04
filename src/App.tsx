@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { SetStateAction, useEffect, useState } from 'react';
 import Profile from './Profile';
 import Header from './Header'
 
@@ -21,12 +21,17 @@ const theme = extendTheme(colors)
 
 
 const App: React.VFC = () => {
+    const [time, setTime] = useState<number>(0);
+    setInterval(() => { setTime(time + 1) }, 10000);
+    console.log("App");
+
 
     return (
         <ChakraProvider theme={theme}>
             <Header />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
+            <p>ここに秒数が表示されます&nbsp;{time}</p>
             <Box px={10} py={10} fontSize={20}>
                 <Flex fontSize={12}>
                     <Box>

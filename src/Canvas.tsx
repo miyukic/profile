@@ -8,11 +8,11 @@ interface Props {
     readonly height: number;
 }
 
-const Canvas:React.FC<Props> = (props: Props) => {
+const Canvas: React.FC<Props> = (props: Props) => {
     // contextを状態として持つ
     const [g, setContext] = useState<CanvasRenderingContext2D | null>(null)
     // 画像読み込み完了トリガー
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState<boolean>(false)
     // コンポーネントの初期化完了後コンポーネント状態にコンテキストを登録
     useEffect(() => {
         const el = document.getElementById("canvas");

@@ -19,13 +19,25 @@ export class Value {
 export function getWidth() {
     return window.innerWidth;
 }
+const Hoge = ({p1, p2='デフォルト引数'} : {p1: string, p2?: string}) => {
+    return (
+        <>
+            <p>{p1}</p>
+            <p>{p2}</p>
+        </>
+    )
+}
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App></App>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+
+const render: () => void = () => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App></App>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+render();
 
 
 window.onload = () => {
