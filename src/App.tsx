@@ -22,16 +22,28 @@ const theme = extendTheme(colors)
 
 const App: React.VFC = () => {
     const [time, setTime] = useState<number>(0);
-    setInterval(() => { setTime(time + 1) }, 10000);
-    console.log("App");
+    useEffect(() => {
+        console.log("App useEffect [] time=" + time);
+    }, [])
+    useEffect(() => {
+        console.log("App useEffect [time] time=" + time);
+    }, [time])
+    console.log("App time=" + time);
+    const countUp = () => { setTime((p) => p + 1); }
 
+    const countDown = () => { setTime((p) => p - 1); }
+//console.log("App");
 
     return (
         <ChakraProvider theme={theme}>
             <Header />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
-            <p>ここに秒数が表示されます&nbsp;{time}</p>
+            <Text >現在のカウント&nbsp;{time}</Text>
+            <Box mx={5} my={5}>
+                <Button mx={5} onClick={countUp}>カウントアップ</Button>
+                <Button onClick={countDown}>カウントダウン</Button>
+            </Box>
             <Box px={10} py={10} fontSize={20}>
                 <Flex fontSize={12}>
                     <Box>

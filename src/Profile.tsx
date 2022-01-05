@@ -7,6 +7,7 @@ import IconPng from './icon.png';
 
 const Profile: React.VFC = () => {
     const SIZE: number = 85;
+    console.log("Profile");
     return (
         <>
         <Icon image={IconPng}></Icon>
