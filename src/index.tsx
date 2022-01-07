@@ -7,7 +7,6 @@ import App from './App';
 import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react';
 
 //export { default as Profile } from './Profile';
-
 //ChakuraUI プロバイダーの設定
 
 
