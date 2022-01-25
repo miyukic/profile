@@ -36,7 +36,7 @@ const App: React.VFC = () => {
 
     return (
         <ChakraProvider theme={theme}>
-            <Header />
+            <Box height={4} bgColor={'#BBAAAA'}></Box>
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
             <Text >現在のカウント&nbsp;{time}</Text>

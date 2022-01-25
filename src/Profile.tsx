@@ -11,9 +11,9 @@ const Profile: React.VFC = () => {
     console.log("Profile");
     return (
         <>
-        <Icon image={IconPng} width={size} height={size}></Icon>
             <Circle bg='gray.100'>
-                <Box margin={4}>
+                <Icon image={IconPng} width={size} height={size}></Icon>
+                <Box margin={4} color={"gray"}>
                     何者でもなく何者にもなれなかった空っぽの方のみゆき❄ 絵を描きはじめました。自作OSも。気の合う人と繋がれたら嬉しいです。絡んでくれたら… うれしい！プログラミング/動画作り/3DCAD/Windows/.NET/WSL/株/ピアノ/興味のある広くetc.
                 </Box>
             </Circle>

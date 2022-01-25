@@ -21,28 +21,28 @@ const Canvas: React.FC<Props> = (props: Props) => {
         const canvasContext = cv.getContext("2d");
         if (canvasContext == null) return;
         setContext(canvasContext);
-    },[])
+    },[]);
     // 状態にコンテキストが登録されたらそれに対して操作できる
-        useEffect(()=>{
-            if(g!==null)
-            {
-                // const img = new Image();
-                // img.src = "img.jpg" // 描画する画像など
-                // img.onload = () => {
-                //     context.drawImage(img,0,0)
-                //     // 更にこれに続いて何か処理をしたい場合
-                //     setLoaded(true)
-                // }
-                g.font = FONT;
-                g.fillText("Hello World", 0, 64);
-            }
-        },[g])
-        // useEffect(()=>{
-        //     if(loaded)
-        //     {
-        //         // それに続く処理
-        //     }
-        // },[loaded])
+    useEffect(()=>{
+        if(g!==null)
+        {
+            // const img = new Image();
+            // img.src = "img.jpg" // 描画する画像など
+            // img.onload = () => {
+            //     context.drawImage(img,0,0)
+            //     // 更にこれに続いて何か処理をしたい場合
+            //     setLoaded(true)
+            // }
+            g.font = FONT;
+            g.fillText("Hello World", 0, 64);
+        }
+    },[g])
+    // useEffect(()=>{
+    //     if(loaded)
+    //     {
+    //         // それに続く処理
+    //     }
+    // },[loaded])
     return (
         <canvas width={props.width} height={props.height} id={props.id}></canvas>
     )
