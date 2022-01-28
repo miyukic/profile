@@ -7,7 +7,7 @@ interface IconProps {
     readonly width?: number;
     readonly height?: number;
     readonly image: string;
-    readonly isCenter: boolean;
+    readonly isCenter?: boolean;
 }
 
 

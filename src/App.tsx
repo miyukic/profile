@@ -1,6 +1,7 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
 import Profile from './Profile';
 import Header from './Header'
+import bg from "./asets/background.png"
 
 import { Value } from './index'
 
@@ -19,7 +20,6 @@ const colors = {
 
 const theme = extendTheme(colors)
 
-
 const App: React.VFC = () => {
     const [time, setTime] = useState<number>(0);
     useEffect(() => {
@@ -32,11 +32,12 @@ const App: React.VFC = () => {
     const countUp = () => { setTime((p) => p + 1); }
 
     const countDown = () => { setTime((p) => p - 1); }
-//console.log("App");
 
     return (
         <ChakraProvider theme={theme}>
-            <Box height={4} bgColor={'#BBAAAA'}></Box>
+            <Box backgroundImage={bg} opacity={0.2} height={200}>あいうえお</Box>
+            <Box opacity={undefined}>
+            <Box height={4} bgColor={'#BBAAAA'} />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
             <Text >現在のカウント&nbsp;{time}</Text>
@@ -58,6 +59,7 @@ const App: React.VFC = () => {
             </Flex>
             </Box>
             <Text></Text>
+            </Box>
             </Box>
         </ChakraProvider>
     )
