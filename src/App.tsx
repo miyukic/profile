@@ -35,7 +35,7 @@ const App: React.VFC = () => {
 
     return (
         <ChakraProvider theme={theme}>
-            <Box backgroundImage={bg} opacity={0.2} height={200}>あいうえお</Box>
+            <Box backgroundImage={bg} opacity={0.5} height={200}>
             <Box opacity={undefined}>
             <Box height={4} bgColor={'#BBAAAA'} />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
@@ -59,6 +59,7 @@ const App: React.VFC = () => {
             </Flex>
             </Box>
             <Text></Text>
+            </Box>
             </Box>
             </Box>
         </ChakraProvider>
