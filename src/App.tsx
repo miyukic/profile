@@ -22,28 +22,38 @@ const theme = extendTheme(colors)
 
 const App: React.VFC = () => {
     const [time, setTime] = useState<number>(0);
+    const [windowHeight, setWindHeight] = useState<number>(0);
+
     useEffect(() => {
         console.log("App useEffect [] time=" + time);
+        setWindHeight(() => window.innerHeight);
+        window.addEventListener("resize", () => { console.log("windowheight: " + windowHeight); setWindHeight(() => window.innerHeight) });
     }, [])
+
+    useEffect(() => {
+
+    }, [windowHeight])
+
     useEffect(() => {
         console.log("App useEffect [time] time=" + time);
     }, [time])
     console.log("App time=" + time);
-    const countUp = () => { setTime((p) => p + 1); }
-
-    const countDown = () => { setTime((p) => p - 1); }
+    const countUp = () => { setTime((p) => p + 1); };
+    //const countDown = () => { setTime((p) => p - 1); };
+    const showWindowSize = () => { };
 
     return (
         <ChakraProvider theme={theme}>
-        <Box backgroundImage={bg} backgroundPosition={"right"} backgroundRepeat={"no-repeat"} height={"auto"}>
+        <Box bgColor={"facebook.100"} Size={4} height={8}>miyuki</Box>
+        <Box backgroundImage={bg} backgroundPosition={"right"} backgroundRepeat={"no-repeat"} height={windowHeight}>
             <Box opacity={undefined} height={"100%"} alignItems={"center"} justifyContent={"center"} display={"flex"} background={"rgba(255, 255, 255, 0.9)"}>
             <Box height={4} bgColor={'#BBAAAA'} />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
             <Text >現在のカウント&nbsp;{time}</Text>
+            <Text >現在のウィンドウサイズ&nbsp;{windowHeight}</Text>
             <Box mx={5} my={5}>
-                <Button mx={5} onClick={countUp}>カウントアップ</Button>
-                <Button onClick={countDown}>カウントダウン</Button>
+                <Button mx={5} onClick={countUp}>現在のウィンドウサイズ</Button>
             </Box>
             <Box px={10} py={10} fontSize={20}>
                 <Flex fontSize={12}>
