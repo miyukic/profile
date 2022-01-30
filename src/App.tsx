@@ -45,8 +45,8 @@ const App: React.VFC = () => {
     return (
         <ChakraProvider theme={theme}>
         <Box bgColor={"facebook.100"} Size={4} height={8}>miyuki</Box>
-        <Box backgroundImage={bg} backgroundPosition={"right"} backgroundRepeat={"no-repeat"} height={windowHeight}>
-            <Box opacity={undefined} height={"100%"} alignItems={"center"} justifyContent={"center"} display={"flex"} background={"rgba(255, 255, 255, 0.9)"}>
+        <Box backgroundImage={bg} backgroundPosition={"100%"} backgroundRepeat={"no-repeat"} height={windowHeight} backgroundSize={"contain"}>
+            <Box opacity={undefined} height={"100%"} alignItems={"center"} justifyContent={"center"} display={"flex"} background={"rgba(255, 255, 255, 0.5)"}>
             <Box height={4} bgColor={'#BBAAAA'} />
             <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
             <Profile></Profile>
