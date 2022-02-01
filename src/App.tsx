@@ -42,35 +42,56 @@ const App: React.VFC = () => {
     //const countDown = () => { setTime((p) => p - 1); };
     const showWindowSize = () => { };
 
+    let test: number = 0;
+
     return (
         <ChakraProvider theme={theme}>
-        <Box bgColor={"facebook.100"} Size={4} height={8}>miyuki</Box>
-        <Box backgroundImage={bg} backgroundPosition={"100%"} backgroundRepeat={"no-repeat"} height={windowHeight} backgroundSize={"contain"}>
-            <Box opacity={undefined} height={"100%"} alignItems={"center"} justifyContent={"center"} display={"flex"} background={"rgba(255, 255, 255, 0.5)"}>
-            <Box height={4} bgColor={'#BBAAAA'} />
-            <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
-            <Profile></Profile>
-            <Text >現在のカウント&nbsp;{time}</Text>
-            <Text >現在のウィンドウサイズ&nbsp;{windowHeight}</Text>
-            <Box mx={5} my={5}>
-                <Button mx={5} onClick={countUp}>現在のウィンドウサイズ</Button>
-            </Box>
-            <Box px={10} py={10} fontSize={20}>
-                <Flex fontSize={12}>
-                    <Box>
-                        <Button width={20}>Twitter</Button>
+{/* 上部のライン */}
+            <Box bgColor={"facebook.100"} Size={4} border={1} textAlign={"right"} height={8}>©miyuki</Box>
+{/* 背景 */}
+            <Box backgroundImage={bg} backgroundPosition={"100%"}
+            backgroundRepeat={"no-repeat"} height={windowHeight}
+            backgroundSize={"contain"} backgroundAttachment={"fixed"}>
+                <Box height={"100%"} justifyContent={"center"} background={"rgba(255, 255, 255, 0.5)"}>
+{/* ここからページ内容 */}
+{/* メインの領域ボックス */}
+                    <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH} maxHeight={10000} height={"1080px"} overflow={"hidden"}>
+                        <Profile></Profile>
+                        <Text >現在のカウント&nbsp;{time}</Text>
+                        <Text >現在のウィンドウサイズ&nbsp;{windowHeight}</Text>
+                        <Box mx={5} my={5}>
+                            <Button mx={5} onClick={countUp}>現在のウィンドウサイズ</Button>
+                        </Box>
+                        <Box px={10} py={10} fontSize={20}>
+                            <Flex fontSize={12}>
+                                <Box>
+                                    <Button width={20}>Twitter</Button>
+                                </Box>
+                                <Box>
+                                    <Button width={20}>GitHub</Button>
+                                </Box>
+                                <Box>
+                                    <Button width={20}>YouTube</Button>
+                                </Box>
+                            </Flex>
+                        </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
                     </Box>
-                    <Box>
-                        <Button width={20}>GitHub</Button>
-                    </Box>
-                    <Box>
-                        <Button width={20}>YouTube</Button>
-                    </Box>
-            </Flex>
-            </Box>
-            <Text></Text>
-            </Box>
-            </Box>
+                    {/* メインの領域ボックス終了 */}
+                </Box>
             </Box>
         </ChakraProvider>
     )
