@@ -44,18 +44,18 @@ const App: React.VFC = () => {
 
     let test: number = 0;
 
-    return (
+    let jsx = (
         <ChakraProvider theme={theme}>
 {/* 上部のライン */}
             <Box bgColor={"facebook.100"} Size={4} border={1} textAlign={"right"} height={8}>©miyuki</Box>
 {/* 背景 */}
             <Box backgroundImage={bg} backgroundPosition={"100%"}
-            backgroundRepeat={"no-repeat"} height={windowHeight}
+            backgroundRepeat={"no-repeat"}
             backgroundSize={"contain"} backgroundAttachment={"fixed"}>
                 <Box height={"100%"} justifyContent={"center"} background={"rgba(255, 255, 255, 0.5)"}>
 {/* ここからページ内容 */}
 {/* メインの領域ボックス */}
-                    <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH} maxHeight={10000} height={"1080px"} overflow={"hidden"}>
+                    <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH} overflow={"hidden"}>
                         <Profile></Profile>
                         <Text >現在のカウント&nbsp;{time}</Text>
                         <Text >現在のウィンドウサイズ&nbsp;{windowHeight}</Text>
@@ -89,12 +89,19 @@ const App: React.VFC = () => {
                         <Box fontSize={30}> {++test} </Box>
                         <Box fontSize={30}> {++test} </Box>
                         <Box fontSize={30}> {++test} </Box>
+                        <Box fontSize={30}> {++test} </Box>
+                        <Box>あああああ</Box>
+                        <Box>あああああ</Box>
+                        <Box>あああああ</Box>
+                        <Box>あああああ</Box>
+                        <Box>あああああ</Box>
                     </Box>
-                    {/* メインの領域ボックス終了 */}
+{/* メインの領域ボックス終了 */}
                 </Box>
             </Box>
         </ChakraProvider>
     )
+    return jsx;
 }
 
 export default App;
