@@ -19,9 +19,12 @@ const Icon: React.FC<IconProps> = ({width=100, height=100, image, isCenter=false
     }
     return (
 
-        <Circle mx={center}  width={width} height={height} bg={'gray.100'}>
-            <Image mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'></Image>
-        </Circle>
+        <Box align={"center"} width={width}>
+            <Circle mx={center}  width={width} height={height} bg={'gray.100'} margin={1}>
+                <Image mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'></Image>
+            </Circle>
+            <Box fontFamily={'sans-serif'} fontSize={"3xl"}>Miyukiumoo</Box>
+        </Box>
     )
 }
 
