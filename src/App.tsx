@@ -48,8 +48,8 @@ const App: React.VFC = () => {
 {/* 背景 */}
             <Box backgroundImage={bg} backgroundPosition={"100%"}
                 backgroundRepeat={"no-repeat"}
-                backgroundSize={"contain"} backgroundAttachment={"fixed"}>
-                <Box height={"100%"} justifyContent={"center"} background={"rgba(255, 255, 255, 0.5)"}>
+                backgroundSize={"contain"} backgroundAttachment={"fixed"} minHeight={windowHeight}>
+                <Box minHeight={windowHeight} height={"100%"} justifyContent={"center"} background={"rgba(256, 256, 256, 0.7)"}>
 {/* ここからページ内容 */}
 {/* 上部のライン */}
             <Box bgColor={"facebook.100"} FontSize={4} marginBottom={5} paddingRight={3} border={2} textAlign={"right"} height={7}>©miyuki</Box>
