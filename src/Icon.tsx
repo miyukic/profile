@@ -21,9 +21,11 @@ const Icon: React.FC<IconProps> = ({width=100, height=100, image, isCenter=false
 
         <Box align={"center"} width={width}>
             <Circle mx={center}  width={width} height={height} bg={'gray.100'} margin={1}>
-                <Image mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'></Image>
+                <Image mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center'>
+                    {/* <Box minwidth={width} minheight={height} bgColor={'AppWorkspace'}>a</Box> */}
+                </Image>
             </Circle>
-            <Box fontFamily={'sans-serif'} fontSize={"3xl"}>Miyukiumoo</Box>
+            <Box fontFamily={'sans-serif'} fontSize={"3xl"} color={'gray.500'}>Miyukiumoo</Box>
         </Box>
     )
 }
