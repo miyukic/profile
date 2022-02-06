@@ -12,7 +12,7 @@ import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react';
 
 export class Value {
     static readonly BLANK: string = "&nbsp;";
-    static readonly WIDTH: number = 1920 / 2;
+    static WIDTH: number = 1920 / 2 ;
 }
 
 export function getWidth() {
