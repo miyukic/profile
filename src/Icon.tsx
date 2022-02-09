@@ -31,9 +31,8 @@ const Icon: React.FC<IconProps> = ({width=100, height=100, image, isCenter=false
 
         <Box align={"center"} width={width}>
             <Circle mx={center} width={width} height={height} bg={'gray.100'} margin={1}>
-                <Avatar ref={imgRef} name={"miyukiumoo"} mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center' onClick={() => console.log(imgRef.current)}>
-                    {/* <Box minwidth={width} minheight={height} bgColor={'AppWorkspace'}>a</Box> */}
-                </Avatar>
+                <Avatar size={"full"} ref={imgRef} name={"miyukiumoo"} mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center' backgroundColor={"gray.100"} onClick={() => console.log(imgRef.current)} />
+                {/* <Image  name={"miyukiumoo"} mx={3} padding={3} src={image} alt="miyuki" borderRadius='full' fallbackSrc='https://via.placeholder.com/150' align='center' onClick={() => console.log(imgRef.current)} /> */}
             </Circle>
             <Box fontFamily={'sans-serif'} fontSize={"3xl"} color={'gray.500'}>Miyukiumoo</Box>
         </Box>
