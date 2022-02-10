@@ -73,7 +73,7 @@ const App: React.VFC = () => {
 {/* 上部のライン */}
             <Box bgColor={"facebook.100"} FontSize={4} marginBottom={windowHeight/3.8} paddingRight={3}
             border={2} textAlign={"right"} height={7} overflow={"hidden"} objectFit={"cover"}>
-                <Image src={icon} objectFit={"cover"}/>©miyuki
+                <Image height={6} paddingTop={1} paddingLeft={2} src={icon} objectFit={"cover"}/>©miyuki
             </Box>
 {/* メインの領域ボックス */}
                     <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
