@@ -25,14 +25,17 @@ const Profile: React.VFC = () => {
                     <IconContext.Provider value={{ color: '#ccc"', size: "" }}>
                         <Button as="a" href="https://twitter.com/Miyukiumoo">
                             <FaTwitter />
+                            &nbsp;
                             Twitter
                             </Button>
                         <Button as="a" href="https://github.com/miyukic">
                             <FaGithub />
+                            &nbsp;
                             GitHub
                         </Button>
                         <Button as="a" href="https://www.youtube.com/channel/UCnHC4vCULFtRm3f22hEu5ag">
                             <FaYoutube/>
+                            &nbsp;
                             YouTube
                         </Button>
                     </IconContext.Provider>
