@@ -46,8 +46,8 @@ const App: React.VFC = () => {
                 Value.WIDTH = a - 100;
             }
         };
-        const windSizeList: number[] = [100, 500, 900, 1300, 1700, 2100];
-        windSizeList.map((x) => {f(x)});
+        const windWidthList: number[] = [100, 500, 900, 1300, 1700, 2100];
+        windWidthList.map((x) => {f(x)});
 
     }, [windowWidth]);
 
@@ -73,8 +73,9 @@ const App: React.VFC = () => {
 {/* ここからページ内容 */}
 {/* 上部のライン */}
             <Box bgColor={"facebook.100"} FontSize={4} marginBottom={windowHeight/3.8} paddingRight={3}
-            border={2} textAlign={"right"} height={7} overflow={"hidden"} objectFit={"cover"}>
-                <Image height={6} paddingTop={1} paddingLeft={2} src={icon} objectFit={"cover"}/>©miyuki
+            border={2} height={7} overflow={"hidden"} objectFit={"cover"}>
+                {/* <Image bgColor={'AppWorkspace'} height={6} paddingTop={1} paddingLeft={2} src={icon} objectFit={"cover"}/> */}
+                <Box margin={"0 0 0 auto"}>©miyuki</Box>
             </Box>
 {/* メインの領域ボックス */}
                     <Box marginLeft={'auto'} marginRight={'auto'} width={Value.WIDTH}>
@@ -82,10 +83,20 @@ const App: React.VFC = () => {
 
 <Box paddingTop={30} marginBottom={30}>
     <Box>
+        イラスト
+        <Image></Image>
+        <Image></Image>
+        <Image></Image>
+        <Image></Image>
+        {/* <Image>xmlns:cc="http://creativecommons.org/ns#"
 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="クリエイティブ・コモンズ・ライセンス" style={{ borderWidth : 0 }} src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+            </a><br />
+            <span  property="cc:attributionName">miyukiumoo</span>
+            を著作者とするこの <span href="http://purl.org/dc/dcmitype/StillImage" rel="dct:type">作品</span> は <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズの 表示 - 継承 4.0 国際 ライセンス</a>で提供されています。</Image> */}
     </Box>
 </Box>
-
 
                         {/* <Text >現在のカウント&nbsp;{time}</Text>
                         <Text >現在のウィンドウサイズ&nbsp;{windowHeight}</Text>
