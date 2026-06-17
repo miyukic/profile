@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Box, Button, HStack } from "@chakra-ui/react"
 import Icon from "./Icon"
 import IconPng from './icon.png';
-import { FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaYoutube, FaGithub, FaPen } from "react-icons/fa";
 import { IconContext } from 'react-icons';
 
 const Profile: React.VFC = () => {
@@ -37,6 +37,11 @@ const Profile: React.VFC = () => {
                             <FaYoutube/>
                             &nbsp;
                             YouTube
+                        </Button>
+                        <Button as="a" href="https://zenn.dev/yumeno">
+                            <FaPen/>
+                            &nbsp;
+                            Zenn
                         </Button>
                     </IconContext.Provider>
                 </HStack>
