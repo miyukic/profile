@@ -15,7 +15,7 @@ const Profile: React.VFC = () => {
         <Icon image={IconPng} width={size} height={size} isCenter={false}></Icon>
             <Box bg='gray.100' shadow="md" rounded={"10"} width={600}>
                 <Box margin={4} padding={3}>
-                    何者でもなく何者にもなれなかった空っぽの方のみゆき❄ 絵を描きはじめました。自作OSも。気の合う人と繋がれたら嬉しいです。絡んでくれたら… うれしい！プログラミング/動画作り/3DCAD/Windows/.NET/WSL/株/ピアノ/興味のある広くetc.
+                    とうふが好きです！マイ研究所（LocusLab）を夢見ながらコードを書いています。LocusSystemを2026/3/21に考案・設立し3年半のブランクを経て、技術沼に帰還。LocusLabについてYouTubeにも動画を投稿してます↓ youtube.com/@LocusLab
                 </Box>
             </Box>
 
